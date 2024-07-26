@@ -11,6 +11,7 @@
   "dependencies": {
     "@thirdweb-dev/react": "^3.6.0",
     "@thirdweb-dev/sdk": "^3.6.0",
+    "caniuse-lite": "^1.0.30001643",
     "ethers": "^5.7.2",
     "next": "13.0.0",
     "react": "18.2.0",
