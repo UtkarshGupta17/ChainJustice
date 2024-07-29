@@ -6,11 +6,11 @@ const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const address = useAddress();
 
-  const { contract } = useContract(process.env.NEXT_PUBLIC_SMART_CONTRACT);
-  const { data: officer } = useContractRead(contract, "officer")
+    const { contract } = useContract(process.env.NEXT_PUBLIC_SMART_CONTRACT);
+    const { data: officer } = useContractRead(contract, "officer")
 
     return (
-        <header className="bg-white">
+        <header className="bg-white shadow-md">
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-4" aria-label="Global">
                 <div className="flex lg:flex-1">
                     <a href="#" className="-m-1 p-1">
@@ -31,43 +31,44 @@ const Header = () => {
                     </button>
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
-                    <Link href="/Complaint" className="block text-lg font-semibold leading-6 text-gray-900">
-                        Register Fir
+                    <Link href="/#" className="block text-lg font-semibold leading-6 text-gray-900">
+                        Register FIR
                     </Link>
                     <Link href="/Status" className="block text-lg font-semibold leading-6 text-gray-900">
                         Check Status
                     </Link>
 
-                    <a href="#" className="text-lg font-semibold leading-6 text-gray-900">
+                    <Link href="/Emergencycontacts" className="text-lg font-semibold leading-6 text-gray-900">
                         Emergency Contacts
-                    </a>
+                    </Link>
                     {address && officer === address && (
                         <Link href="/Admin" className="block text-lg font-semibold leading-6 text-gray-900">
                             Admin
                         </Link>
                     )}
                 </div>
-                <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+
+                <div className="hidden lg:flex lg:flex-1 lg:justify-end ">
                     <ConnectWallet accentColor='blue' colorMode='light' />
                 </div>
             </nav>
             {mobileMenuOpen && (
                 <div className="lg:hidden">
                     <div className="space-y-1 px-5 pt-2 pb-3">
-                        <Link href="/Complaint" className="block text-lg font-semibold leading-6 text-gray-900">
+                        <Link href="/#" className="block text-lg font-semibold leading-6 text-gray-900">
                             Register Fir
                         </Link>
                         <Link href="/Status" className="block text-lg font-semibold leading-6 text-gray-900">
                             Check Status
                         </Link>
-                        <a href="#" className="block text-lg font-semibold leading-6 text-gray-900">
+                        <Link href="/Emergencycontacts" className="text-lg font-semibold leading-6 text-gray-900">
                             Emergency Contacts
-                        </a>
-                        {address && officer === address && (
-                        <Link href="/Admin" className="block text-lg font-semibold leading-6 text-gray-900">
-                            Admin
                         </Link>
-                    )}
+                        {address && officer === address && (
+                            <Link href="/Admin" className="block text-lg font-semibold leading-6 text-gray-900">
+                                Admin
+                            </Link>
+                        )}
 
                         <div className="mt-4">
                             <ConnectWallet accentColor='blue' colorMode='light' />
