@@ -6,6 +6,33 @@ body {
     background-color: #ffffff;
     color: black;
 }
+/* Add this to your global CSS file */
+
+@keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .marquee {
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .marquee-content {
+    display: flex;
+    animation: marquee 40s linear infinite;
+  }
+  
+  .marquee-content > span {
+    display: inline-block;
+  }
+  
 
 
 @layer components {
