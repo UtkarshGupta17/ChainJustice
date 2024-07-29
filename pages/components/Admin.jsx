@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useContract, useContractRead, useContractWrite } from "@thirdweb-dev/react";
-import Header from './components/Header';
+import Header from './Header';
 import SlidingBar from './SlidingBar';
 
 const Getter = () => {
