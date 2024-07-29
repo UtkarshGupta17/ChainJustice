@@ -32,19 +32,6 @@ const EmergencyContacts = () => {
                                         </div>
                                         <div className="flex items-center space-x-4">
                                             <span className="text-m text-gray-600">{contact.number}</span>
-<<<<<<< HEAD
-                                            <a 
-                                                href={`tel:${contact.number}`} 
-                                                className="flex items-center space-x-2 text-indigo-600 hover:text-indigo-500 text-sm" 
-                                                aria-label={`Call ${contact.name}`}
-                                            >
-                                                <p>Call Now</p> 📞
-                                            </a>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-=======
                                             
                                                <a href={`tel:${contact.number}`}
                                             className="flex items-center space-x-2 text-indigo-600 hover:text-indigo-500 text-sm"
@@ -55,21 +42,13 @@ const EmergencyContacts = () => {
                                     </div>
                                     </div>
                                 ))}
->>>>>>> 7f88cd834d14c5e601a48bf31cb97ce3f11e1c44
                         </div>
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
-=======
         </div >
->>>>>>> 7f88cd834d14c5e601a48bf31cb97ce3f11e1c44
         </>
     );
 }
 
-<<<<<<< HEAD
 export default EmergencyContacts;
-=======
-export default EmergencyContacts;
->>>>>>> 7f88cd834d14c5e601a48bf31cb97ce3f11e1c44

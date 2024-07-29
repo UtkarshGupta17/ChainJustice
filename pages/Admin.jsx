@@ -153,8 +153,4 @@ const Getter = () => {
     )
 }
 
-<<<<<<< HEAD
 export default Getter;
-=======
-export default Getter;
->>>>>>> 7f88cd834d14c5e601a48bf31cb97ce3f11e1c44
